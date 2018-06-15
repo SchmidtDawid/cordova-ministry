@@ -5,11 +5,7 @@
         <img src="../../static/img/v.png" alt="Vuetify.js" class="mb-5">
         <blockquote>
          lalalala
-          <footer>
-            <small>
-              <em>&mdash;John Johnson</em>
-            </small>
-          </footer>
+
         </blockquote>
       </v-layout>
     </v-slide-y-transition>
