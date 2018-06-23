@@ -2,21 +2,18 @@
   <v-app>
     <v-navigation-drawer
       fixed
-      :clipped="clipped"
       v-model="drawer"
       app
     ></v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-side-icon @click.stop="drawer = !drawer" light></v-toolbar-side-icon>
+    <v-toolbar fixed app>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>
         <app-menu></app-menu>
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
   <v-content>
-    <v-container fluid>
       <router-view></router-view>
-    </v-container>
   </v-content>
   <v-footer app></v-footer>
 </v-app>
@@ -33,7 +30,10 @@
         items: [{
           icon: 'bubble_chart',
           title: 'Inspire'
-        }]
+        }],
+        ministries: [
+          'asd'
+        ]
       }
     },
     components: {
@@ -74,9 +74,12 @@
 </script>
 
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext");
+
 	body {
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
+    font-family: 'Lato', sans-serif;
 	}
   .footer{ /* Apply this to v-bottom-nav if necessary. */
     margin-bottom: constant(safe-area-inset-bottom);
